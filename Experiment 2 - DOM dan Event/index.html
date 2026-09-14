@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eksperimen 2 - DOM dan Event</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="praktikum-card">
+        <p class="label">Eksperimen 2</p>
+        <h1 id="judul-utama">Latihan DOM dan Event</h1>
+        <p id="status">Halaman siap digunakan.</p>
+
+        <div class="input-group">
+          <label for="nama">Nama mahasiswa</label>
+          <input type="text" id="nama" maxlength="30" placeholder="Ketik nama di sini..." />
+          <p class="counter"><span id="jumlah-karakter">0</span>/30 karakter</p>
+        </div>
+
+        <div class="actions">
+          <button type="button" id="ubah-judul">Ubah judul</button>
+          <button type="button" id="toggle-status" aria-pressed="false">Toggle status</button>
+        </div>
+      </section>
+    </main>
+    <script src="js/app.js" defer></script>
+  </body>
+</html>

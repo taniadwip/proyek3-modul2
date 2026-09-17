@@ -76,7 +76,7 @@ async function muatFitur() {
     console.error(error);
     tampilkanState("error", `Gagal: ${error.message}`);
   } finally {
-    tombolMuat.disabled = true;
+    tombolMuat.disabled = false;
     tombolMuat.removeAttribute("aria-busy");
   }
 }

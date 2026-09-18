@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D'Okeh Fried Chicken & Geprek | Kenyang Pas di Kantong Mahasiswa</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <!-- 1. Header & Navigasi -->
+    <header class="site-header">
+      <div class="container header-layout">
+        <a class="brand-logo" href="#">D'Okeh Chicken</a>
+
+        <!-- Tombol Aksi Header: Tema & Hamburger Mobile -->
+        <div class="header-actions">
+          <button id="btn-tema" class="button-icon" type="button" aria-label="Ganti ke tema gelap">🌙</button>
+          <button id="btn-menu" class="btn-menu" type="button" aria-expanded="false" aria-controls="nav-utama" aria-label="Buka menu navigasi">
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+          </button>
+        </div>
+
+        <nav id="nav-utama" class="site-nav" aria-label="Navigasi Utama">
+          <a class="nav-link" href="#keunggulan">Keunggulan</a>
+          <a class="nav-link" href="#menu">Menu</a>
+          <a class="nav-link" href="#faq">FAQ</a>
+          <a class="nav-link" href="#kontak">Pesan</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- 2. Hero Section dengan CTA Lihat Menu -->
+      <section class="hero">
+        <div class="container hero-layout">
+          <div class="hero-content">
+            <p class="tagline">Oken Rasanya, Okeh Harganya!</p>
+            <h1>Ayam Krispi Renyah, Porsi Puas, Pas di Kantong Mahasiswa!</h1>
+            <p class="hero-desc">Solusi makan siang dan malam praktis di sela jadwal kuliah. Dibuat dari daging ayam segar dengan racikan bumbu gurih meresap dan sambal pedas nampol.</p>
+            <!-- CTA Utama: Mengarahkan pengunjung melihat varian menu -->
+            <a class="button button--primary" href="#menu">Lihat Pilihan Menu</a>
+          </div>
+          <div class="hero-media">
+            <img class="hero-img" src="assets/d'okeh.jpeg" alt="Sajian potongan Original Chicken D'Okeh goreng krispi renyah di atas piring" />
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Section Keunggulan -->
+      <section id="keunggulan" class="section-block">
+        <div class="container">
+          <h2 class="section-title">Kenapa Pilih D'Okeh?</h2>
+          <div class="card-grid">
+            <article class="feature-card">
+              <h3>Harga Mahasiswa</h3>
+              <p>Porsi makan kenyang lengkap dengan nasi dan minuman mulai dari Rp12.000 saja.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Sambal Fresh Dadakan</h3>
+              <p>Pilihan sambal geprek korek dan bawang diulek langsung saat dipesan demi kesegaran rasa.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Penyajian Cepat</h3>
+              <p>Tidak perlu menunggu lama, makanan siap saji hangat tepat waktu di sela waktu jeda kuliah.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Section Menu Andalan (Target dari CTA Hero) -->
+      <section id="menu" class="section-block section-block--alt">
+        <div class="container">
+          <h2 class="section-title">Menu Favorit Mahasiswa</h2>
+
+          <!-- Filter Kategori Menu -->
+          <div class="filter-group" role="group" aria-label="Filter Kategori Menu">
+            <button class="btn-filter is-active" type="button" data-kategori="semua">Semua</button>
+            <button class="btn-filter" type="button" data-kategori="paket">Paket Kenyang</button>
+            <button class="btn-filter" type="button" data-kategori="hemat">Menu Hemat</button>
+            <button class="btn-filter" type="button" data-kategori="minuman">Minuman</button>
+          </div>
+
+          <!-- Kontainer menu dinamis (dirender via JavaScript) -->
+          <div id="menu-container" class="card-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <!-- 5. Section Alur Pemesanan & Kontak -->
+      <section id="faq" class="section-block">
+        <div class="container faq-layout">
+          <h2 class="section-title">Pertanyaan Umum (FAQ)</h2>
+          <div class="accordion" id="faq-accordion">
+            <article class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-ans-1">
+                <span>Apakah bisa pesan level pedas sambalnya?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div id="faq-ans-1" class="faq-answer" hidden>
+                <p>Bisa! Sambal korek dan geprek kami bisa disesuaikan mulai dari level 1 (pedas santai) sampai level 5 (pedas nampol).</p>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-ans-2">
+                <span>Bisa pesan untuk konsumsi acara kampus / rapat himpunan?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div id="faq-ans-2" class="faq-answer" hidden>
+                <p>Bisa banget. Kami melayani pesanan *catering* kotak untuk kegiatan kampus dengan pemesanan minimal $H-1$.</p>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-ans-3">
+                <span>Metode pembayaran apa saja yang diterima?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div id="faq-ans-3" class="faq-answer" hidden>
+                <p>Kami menerima uang tunai (*cash*) dan seluruh dompet digital via QRIS.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="kontak" class="section-block">
+        <div class="container contact-container">
+          <!-- Form Pemesanan Interaktif -->
+          <form id="form-pesanan" class="order-form" novalidate>
+            <h3>Formulir Pemesanan Cepat</h3>
+
+            <div class="form-group">
+              <label for="input-nama">Nama Pemesan:</label>
+              <input type="text" id="input-nama" placeholder="Contoh: Budi Santoso" autocomplete="name" />
+              <span id="err-nama" class="error-msg" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="select-menu">Pilih Menu:</label>
+              <select id="select-menu">
+                <option value="">-- Pilih Paket Menu --</option>
+                <option value="Paket Ayam Geprek">Paket Ayam Geprek (Rp15.000)</option>
+                <option value="Paket Komplit D'Okeh">Paket Komplit D'Okeh (Rp18.000)</option>
+                <option value="Paket Sayap Hemat">Paket Sayap Hemat (Rp12.000)</option>
+              </select>
+              <span id="err-menu" class="error-msg" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="input-catatan">Catatan Tambahan (opsional):</label>
+              <input type="text" id="input-catatan" placeholder="Contoh: Sambal dipisah, paha atas" />
+            </div>
+
+            <button type="submit" class="button button--primary button--full">Kirim Pesanan</button>
+          </form>
+
+          <!-- Pesan Status Berhasil -->
+          <div id="pesan-sukses" class="alert-success" hidden aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 6. Footer -->
+    <footer class="site-footer">
+      <div class="container footer-layout">
+        <p>&copy; 2026 D'Okeh Chicken. Hak cipta dilindungi undang-undang.</p>
+        <p>Instagram: <a class="footer-link" href="https://instagram.com/dokeh.id" target="_blank" rel="noopener">@dokeh.id</a></p>
+      </div>
+    </footer>
+    <button id="btn-top" class="btn-back-to-top" type="button" aria-label="Kembali ke atas halaman" hidden>↑</button>
+  </body>
+</html>

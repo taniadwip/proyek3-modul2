@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Profile Card</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <!-- Tombol Pengganti Tema -->
+      <header class="top-bar">
+        <button id="btn-tema" type="button" class="btn-secondary">Ganti Tema</button>
+      </header>
+
+      <!-- Kontainer Status State (Loading, Error, Empty) -->
+      <section id="status-container" class="status-box" aria-live="polite">
+        <p id="status-teks">Menyiapkan profil...</p>
+        <button id="btn-coba-lagi" type="button" class="btn-primary" hidden>Coba Lagi</button>
+      </section>
+
+      <!-- Kartu Profil Utama -->
+      <article id="kartu-profil" class="kartu" hidden>
+        <header class="kartu-header">
+          <img id="profil-avatar" src="" alt="Foto Avatar Profil" class="avatar" />
+          <div class="header-info">
+            <h1 id="profil-nama">Nama</h1>
+            <p id="profil-peran" class="subjudul">Peran</p>
+            <p id="profil-institusi" class="institusi">Institusi</p>
+          </div>
+        </header>
+
+        <section class="kartu-body">
+          <p id="profil-bio" class="bio">Bio singkat</p>
+
+          <!-- Bagian Toggle Detail -->
+          <button id="btn-detail" type="button" class="btn-secondary" aria-expanded="false" aria-controls="detail-konten">Buka Detail</button>
+          <div id="detail-konten" class="detail-konten" hidden>
+            <ul class="detail-list">
+              <li><strong>Email:</strong> <span id="detail-email">-</span></li>
+              <li><strong>Lokasi:</strong> <span id="detail-lokasi">-</span></li>
+              <li><strong>GitHub:</strong> <span id="detail-github">-</span></li>
+              <li><strong>Status:</strong> <span id="detail-status">-</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Bagian Keterampilan -->
+        <section class="kartu-keterampilan">
+          <h2>Keterampilan</h2>
+          <div id="daftar-skill" class="skill-container">
+            <!-- Item skill dirender dinamis -->
+          </div>
+
+          <!-- Form Tambah Skill -->
+          <form id="form-skill" class="form-skill" novalidate>
+            <label for="input-skill">Tambah keterampilan baru:</label>
+            <div class="input-group">
+              <input type="text" id="input-skill" placeholder="Contoh: React.js" autocomplete="off" />
+              <button type="submit" class="btn-primary">Tambah</button>
+            </div>
+            <span id="error-skill" class="error-msg" aria-live="assertive"></span>
+          </form>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "nama": "Tania Dwi Pangesti",
+  "peran": "Front-End Developer & Mahasiswa Teknik Informatika",
+  "institusi": "Politeknik Negeri Bandung",
+  "avatar": "https://api.dicebear.com/7.x/bottts/svg?seed=ProfilCard",
+  "bio": "Fokus pada pengembangan antarmuka web yang interaktif, modular, ramah aksesibilitas, dan berbasis standar web modern.",
+  "detail": {
+    "email": "tanai.dwi,tif25@polban.ac.id",
+    "lokasi": "Bandung, Jawa Barat",
+    "github": "github.com/taniadwip",
+    "status": "Tersedia untuk proyek tim"
+  },
+  "keterampilan": ["HTML5 & CSS3", "JavaScript", "Bootstrap 5", "Git & GitHub"]
+}
